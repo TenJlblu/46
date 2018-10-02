@@ -13,7 +13,7 @@ public class AnswerGenerator {
             if (entry.getValue().contains(request.toLowerCase())){
                 return entry.getKey();
             }
-        }
+        } 
         return "khmm, I don't know, what should I say\n";
     }
 }
