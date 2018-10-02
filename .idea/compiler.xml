@@ -9,5 +9,8 @@
         <module name="TGbot1" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="TGbot1" target="1.5" />
+    </bytecodeTargetLevel>
   </component>
 </project>

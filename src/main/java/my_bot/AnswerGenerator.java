@@ -8,7 +8,6 @@ public class AnswerGenerator {
     private final Resource resource = new Resource();
 
     public String GetAnswer(String request){
-        //System.out.print("222222222222222222222222222222222222222222222222222222222222222222222222222222\n");
         resource.Fill();
         for (Map.Entry<String, ArrayList<String>> entry : resource.Variants.entrySet()){
             if (entry.getValue().contains(request.toLowerCase())){
