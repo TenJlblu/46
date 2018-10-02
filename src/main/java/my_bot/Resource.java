@@ -3,9 +3,7 @@ package my_bot;
 import java.text.SimpleDateFormat;
 import java.util.*;
 
-public class Resource{
-
-    public final HashMap<String, ArrayList<String>> Variants =  new HashMap<String, ArrayList<String>>();;
+public class Resource implements ResourceInterface {
 
     public void Fill(){
         ArrayList<String> helpVariants = new ArrayList<String>();

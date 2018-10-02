@@ -3,10 +3,11 @@ package my_bot;
 import java.util.ArrayList;
 import java.util.Map;
 
-public class AnswerGenerator {
+public class AnswerGenerator implements AnswerGeneratorInterface {
 
-    private final Resource resource = new Resource();
+    private ResourceInterface resource = new Resource();
 
+    @Override
     public String GetAnswer(String request){
         resource.Fill();
         for (Map.Entry<String, ArrayList<String>> entry : resource.Variants.entrySet()){

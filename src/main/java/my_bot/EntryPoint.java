@@ -4,7 +4,7 @@ import org.telegram.telegrambots.ApiContextInitializer;
 
 public class EntryPoint {
     public static void main(String[] args){
-        AnswerGenerator generator = new AnswerGenerator();
+        AnswerGeneratorInterface generator = new AnswerGenerator();
         ApiContextInitializer.init();
         TGBot telegramBot = new TGBot(generator);
         CMDBot cmdBot = new CMDBot(generator);

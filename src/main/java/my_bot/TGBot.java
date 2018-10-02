@@ -1,6 +1,5 @@
 package my_bot;
 
-import org.telegram.telegrambots.ApiContextInitializer;
 import org.telegram.telegrambots.bots.TelegramLongPollingBot;
 import org.telegram.telegrambots.meta.TelegramBotsApi;
 import org.telegram.telegrambots.meta.api.methods.send.SendMessage;
@@ -8,12 +7,9 @@ import org.telegram.telegrambots.meta.api.objects.Message;
 import org.telegram.telegrambots.meta.api.objects.Update;
 import org.telegram.telegrambots.meta.exceptions.TelegramApiException;
 
-import java.text.SimpleDateFormat;
-import java.util.*;
-
 public class TGBot extends TelegramLongPollingBot implements Runnable {
 
-    private AnswerGenerator solver;
+    private AnswerGeneratorInterface solver;
 
     public void run(){
         TelegramBotsApi botApi = new TelegramBotsApi();
@@ -24,7 +20,7 @@ public class TGBot extends TelegramLongPollingBot implements Runnable {
         }
     }
 
-    TGBot(AnswerGenerator generator){
+    TGBot(AnswerGeneratorInterface generator){
         this.solver = generator;
     }
 

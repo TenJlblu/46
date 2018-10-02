@@ -3,9 +3,9 @@ import java.util.Scanner;
 
 public class CMDBot implements Runnable {
 
-    private AnswerGenerator solver;
+    private AnswerGeneratorInterface solver;
 
-    CMDBot(AnswerGenerator generator){
+    CMDBot(AnswerGeneratorInterface generator){
         this.solver = generator;
     }
 
